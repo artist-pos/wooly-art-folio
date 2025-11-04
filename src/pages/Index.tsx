@@ -15,16 +15,13 @@ const Index = () => {
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h1 className="font-handwritten text-5xl md:text-7xl font-bold text-foreground leading-tight">
-            Woolworst: Artistic Accountability Project
+            The Woolworst Artistic Accountability Project
           </h1>
           
           <Card className="bg-card/50 backdrop-blur-sm border-border shadow-lg">
             <CardContent className="p-6 md:p-8">
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                <strong className="text-foreground">Disclaimer:</strong> This project is an independent artistic 
-                expression and community documentation initiative. It is not affiliated with, endorsed by, or 
-                representing any corporation or official entity. All content represents individual perspectives 
-                and creative interpretations. Submissions are moderated for authenticity and relevance.
+                <strong className="text-foreground">Disclaimer:</strong> This is an independent, non-commercial documentation initiative utilising artistic expression. The Woolworst Accountability Project is not affiliated with, endorsed by, or representing any current or former corporate or official legal entity. All content and visual assets represent individual perspectives and creative interpretations of alleged systemic issues. Submissions are moderated solely to verify relevance to the project's mandate.
               </p>
             </CardContent>
           </Card>
@@ -59,7 +56,7 @@ const Index = () => {
                     <p>
                       This project began as a simple observation: corporations hold immense power over our 
                       daily lives, yet meaningful accountability mechanisms remain elusive. Traditional channels 
-                      for consumer feedback often feel like shouting into the void.
+                      for consumer feedback often feel like shouting into the void.  
                     </p>
                     
                     <p>
@@ -136,10 +133,7 @@ const Index = () => {
           <Card className="bg-primary/5 border-primary/20">
             <CardContent className="p-4 md:p-6">
               <p className="text-sm text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Privacy Note:</strong> All submissions are reviewed before 
-                publication. We respect your privacy and will not share personal information without explicit 
-                consent. You may submit anonymously. All content must adhere to community guidelines and focus 
-                on factual experiences rather than personal attacks.
+                <strong className="text-foreground">Privacy Note:</strong> All submissions are reviewed and moderated for data integrity and relevance to the project's mandate. We respect your privacy: your personal information is treated as strictly confidential and will not be shared without your explicit written consent. You may, and are encouraged to, submit anonymously. All content must focus on factual, verifiable experiences that reveal systemic patterns rather than serving as personal attacks or emotional venting.
               </p>
             </CardContent>
           </Card>
