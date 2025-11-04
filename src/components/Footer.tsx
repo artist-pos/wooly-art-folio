@@ -43,11 +43,6 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#terms" className="text-muted-foreground hover:text-primary transition-colors">
-                    Terms of Use
-                  </a>
-                </li>
-                <li>
                   <a href="#disclaimer" className="text-muted-foreground hover:text-primary transition-colors">
                     Disclaimer
                   </a>
@@ -63,16 +58,6 @@ const Footer = () => {
                 <li>
                   <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
                     Contact Us
-                  </a>
-                </li>
-                <li>
-                  <a href="#submit" className="text-muted-foreground hover:text-primary transition-colors">
-                    Submit a Story
-                  </a>
-                </li>
-                <li>
-                  <a href="#archive" className="text-muted-foreground hover:text-primary transition-colors">
-                    Browse Archive
                   </a>
                 </li>
               </ul>
