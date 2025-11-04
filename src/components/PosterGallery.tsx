@@ -1,5 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import poster1 from "@/assets/poster-1.png";
+import poster2 from "@/assets/poster-2.png";
+import poster3 from "@/assets/poster-3.png";
+import poster4 from "@/assets/poster-4.png";
+import poster5 from "@/assets/poster-5.png";
 
 const posters = [
   {
@@ -13,25 +17,29 @@ const posters = [
     id: 2,
     title: "The Fresh Food People... break their bodies",
     caption: "Tracking the human cost of understaffing; examining claims of buried injury reports and long-term physical compromise.",
-    imageAlt: "Poster showing the human cost of understaffing"
+    imageAlt: "Poster showing the human cost of understaffing",
+    image: poster2
   },
   {
     id: 3,
     title: "A Fresh Way to Save... violating contracts",
     caption: "Exposing the alleged corporate strategy of using low-hour contracts to systematically deny full-time status and security.",
-    imageAlt: "Poster exposing contract violations"
+    imageAlt: "Poster exposing contract violations",
+    image: poster3
   },
   {
     id: 4,
     title: "That's Today's Fresh Food People... shielding abusers",
     caption: "Investigating the alleged culture of protected misconduct, nepotism, and the failure of HR to address internal harassment claims.",
-    imageAlt: "Poster investigating protected misconduct"
+    imageAlt: "Poster investigating protected misconduct",
+    image: poster4
   },
   {
     id: 5,
     title: "We Can Help With That... forging your documents",
     caption: "Detailing the most serious claims of alleged document fraud, including pre-filled health and safety forms designed to shield the company from liability.",
-    imageAlt: "Poster detailing alleged document fraud"
+    imageAlt: "Poster detailing alleged document fraud",
+    image: poster5
   }
 ];
 
@@ -47,19 +55,18 @@ const PosterGallery = () => {
             A series of visual documents charting systemic patterns of alleged corporate abuse and contract violations
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:[&>*:nth-last-child(-n+2)]:mx-auto">
           {posters.map((poster) => (
-            <Card 
-              key={poster.id} 
+            <Card
+              key={poster.id}
               className="group overflow-hidden bg-card/80 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
             >
               <CardContent className="p-0">
                 {/* Poster Image */}
                 <div className="aspect-[3/4] bg-gradient-to-br from-primary/20 to-secondary/20 relative overflow-hidden">
                   {poster.image ? (
-                    <img 
-                      src={poster.image} 
+                    <img
+                      src={poster.image}
                       alt={poster.imageAlt}
                       className="w-full h-full object-contain"
                     />
@@ -74,7 +81,7 @@ const PosterGallery = () => {
                     </div>
                   )}
                 </div>
-                
+               
                 {/* Caption */}
                 <div className="p-4 md:p-6 space-y-2">
                   <h3 className="font-handwritten text-xl md:text-2xl font-bold text-foreground">
