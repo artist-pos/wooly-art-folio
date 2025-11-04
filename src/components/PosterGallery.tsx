@@ -1,11 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
+import poster1 from "@/assets/poster-1.png";
 
 const posters = [
   {
     id: 1,
     title: "The Truth Behind Woolworst",
     caption: "Documenting the alleged systemic failure across employee safety, contract integrity, racial equity, and the protection of misconduct.",
-    imageAlt: "Poster documenting systemic failures at Woolworst"
+    imageAlt: "Poster documenting systemic failures at Woolworst",
+    image: poster1
   },
   {
     id: 2,
@@ -53,22 +55,24 @@ const PosterGallery = () => {
               className="group overflow-hidden bg-card/80 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
             >
               <CardContent className="p-0">
-                {/* Poster Image Placeholder */}
+                {/* Poster Image */}
                 <div className="aspect-[3/4] bg-gradient-to-br from-primary/20 to-secondary/20 relative overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center p-6">
-                    <div className="text-center space-y-2">
-                      <div className="text-6xl opacity-20">📋</div>
-                      <p className="text-xs text-muted-foreground">
-                        Poster {poster.id}
-                      </p>
+                  {poster.image ? (
+                    <img 
+                      src={poster.image} 
+                      alt={poster.imageAlt}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center p-6">
+                      <div className="text-center space-y-2">
+                        <div className="text-6xl opacity-20">📋</div>
+                        <p className="text-xs text-muted-foreground">
+                          Poster {poster.id}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  {/* Image will go here - using placeholder for now */}
-                  {/* <img 
-                    src={poster.image} 
-                    alt={poster.imageAlt}
-                    className="w-full h-full object-cover"
-                  /> */}
+                  )}
                 </div>
                 
                 {/* Caption */}
