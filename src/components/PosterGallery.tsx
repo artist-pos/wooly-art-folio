@@ -49,10 +49,10 @@ const PosterGallery = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {posters.map((poster) => (
+          {posters.map((poster, index) => (
             <Card 
               key={poster.id} 
-              className="group overflow-hidden bg-card/80 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
+              className={`group overflow-hidden bg-card/80 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 ${index === 3 ? 'lg:col-start-2' : ''}`}
             >
               <CardContent className="p-0">
                 {/* Poster Image */}
