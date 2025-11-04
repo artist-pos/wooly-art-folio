@@ -1,78 +1,107 @@
-// App.tsx
-import React, { useState } from 'react';
-import Footer from './components/Footer'; // Adjust path if needed
+import { Separator } from "@/components/ui/separator";
+import React from 'react';
 
-// Placeholder content components (replace with your real content/components)
-const HomeContent = () => (
-  <div className="container mx-auto px-4 py-8">
-    <h1 className="text-4xl font-bold">Welcome to Woolworst</h1>
-    <p>Home page content goes here...</p>
-  </div>
-);
+interface FooterProps {
+  setView: (view: string) => void;
+}
 
-const MissionContent = () => (
-  <div className="container mx-auto px-4 py-8">
-    <h1 className="text-4xl font-bold">Our Mission</h1>
-    <p>Mission statement details...</p>
-  </div>
-);
-
-const GuidelinesContent = () => (
-  <div className="container mx-auto px-4 py-8">
-    <h1 className="text-4xl font-bold">Community Guidelines</h1>
-    <p>Guidelines details...</p>
-  </div>
-);
-
-const FAQContent = () => (
-  <div className="container mx-auto px-4 py-8">
-    <h1 className="text-4xl font-bold">FAQ</h1>
-    <p>Frequently asked questions...</p>
-  </div>
-);
-
-const PrivacyContent = () => (
-  <div className="container mx-auto px-4 py-8">
-    <h1 className="text-4xl font-bold">Privacy Policy</h1>
-    <p>Privacy details...</p>
-  </div>
-);
-
-const DisclaimerContent = () => (
-  <div className="container mx-auto px-4 py-8">
-    <h1 className="text-4xl font-bold">Disclaimer</h1>
-    <p>Legal disclaimer...</p>
-  </div>
-);
-
-const App: React.FC = () => {
-  const [currentView, setView] = useState('home');
-
-  const renderContent = () => {
-    switch (currentView) {
-      case 'mission':
-        return <MissionContent />;
-      case 'guidelines':
-        return <GuidelinesContent />;
-      case 'faq':
-        return <FAQContent />;
-      case 'privacy':
-        return <PrivacyContent />;
-      case 'disclaimer':
-        return <DisclaimerContent />;
-      default:
-        return <HomeContent />;
-    }
-  };
-
+const Footer = ({ setView }: FooterProps) => {
+  const currentYear = new Date().getFullYear();
   return (
-    <div className="min-h-screen flex flex-col">
-      <main className="flex-1">
-        {renderContent()}
-      </main>
-      <Footer setView={setView} />
-    </div>
+    <footer className="border-t border-border bg-card/30 backdrop-blur-sm mt-16">
+      <div className="container mx-auto px-4 py-8 md:py-12">
+        <div className="max-w-6xl mx-auto space-y-8">
+          {/* Links Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="space-y-3">
+              <h3 className="font-handwritten text-2xl font-bold text-foreground">
+                About
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <button 
+                    onClick={() => setView('mission')}
+                    className="text-muted-foreground hover:text-primary transition-colors bg-transparent border-none cursor-pointer"
+                    aria-label="Go to Our Mission"
+                  >
+                    Our Mission
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => setView('guidelines')}
+                    className="text-muted-foreground hover:text-primary transition-colors bg-transparent border-none cursor-pointer"
+                    aria-label="Go to Community Guidelines"
+                  >
+                    Community Guidelines
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => setView('faq')}
+                    className="text-muted-foreground hover:text-primary transition-colors bg-transparent border-none cursor-pointer"
+                    aria-label="Go to FAQ"
+                  >
+                    FAQ
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-3">
+              <h3 className="font-handwritten text-2xl font-bold text-foreground">
+                Legal
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <button 
+                    onClick={() => setView('privacy')}
+                    className="text-muted-foreground hover:text-primary transition-colors bg-transparent border-none cursor-pointer"
+                    aria-label="Go to Privacy Policy"
+                  >
+                    Privacy Policy
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => setView('disclaimer')}
+                    className="text-muted-foreground hover:text-primary transition-colors bg-transparent border-none cursor-pointer"
+                    aria-label="Go to Disclaimer"
+                  >
+                    Disclaimer
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-3">
+              <h3 className="font-handwritten text-2xl font-bold text-foreground">
+                Connect
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <a 
+                    href="mailto:woolworstt@gmail.com"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                    aria-label="Email us at woolworstt@gmail.com"
+                  >
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <Separator className="bg-border" />
+          {/* Copyright */}
+          <div className="text-center space-y-2">
+            <p className="text-sm text-muted-foreground">
+              © {currentYear} Woolworst. An independent artistic accountability initiative.
+            </p>
+            <p className="text-xs text-muted-foreground">
+              Not affiliated with any corporation. All content represents individual perspectives.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 };
-
-export default App;
+export default Footer;
