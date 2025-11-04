@@ -54,7 +54,7 @@ const Index = () => {
                   
                   <div className="prose prose-invert prose-lg max-w-none space-y-4">
                     <p>
-                      This project began as a critical observation: while major corporations exert vast power over employees and communities, robust accountability for systemic alleged misconduct remains elusive. Traditional reporting channels—HR, internal systems, and customer service logs—are often designed to absorb and silence complaints.
+                      This project began as a critical observation: corporations hold immense power over our daily lives, yet meaningful accountability mechanisms for workers remain elusive. Traditional channels for raising workplace issues—HR, internal systems, and union routes—often feel like shouting into the void.
                     </p>
                     
                     <p>
