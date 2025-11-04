@@ -13,7 +13,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <HashRouter>  // Swap here
+      <HashRouter>  
   <Routes>
     <Route path="/" element={<Index />} />
     <Route path="*" element={<NotFound />} />
