@@ -95,10 +95,10 @@ const Index = () => {
         <div className="max-w-3xl mx-auto space-y-6">
           <div className="text-center space-y-4">
             <h2 className="font-handwritten text-4xl md:text-5xl font-bold text-foreground">
-              Submit Your Story
+              Contribute Your Factual Testimony
             </h2>
             <p className="text-muted-foreground text-lg">
-              Share your experience and contribute to the archive of corporate accountability
+              Your experience is the essential raw material for the next phase of **visual documentation and public disclosure.** Help us expand the archive of systemic patterns.
             </p>
           </div>
 
