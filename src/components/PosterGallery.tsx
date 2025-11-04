@@ -18,7 +18,7 @@ const posters = [
   {
     id: 3,
     title: "A Fresh Way to Save... violating contracts",
-    caption: "Exposing the alleged corporate strategy of using low-hour contracts (e.g., 15.5 hours) to systematically deny full-time status and security.",
+    caption: "Exposing the alleged corporate strategy of using low-hour contracts to systematically deny full-time status and security.",
     imageAlt: "Poster exposing contract violations"
   },
   {
@@ -41,10 +41,10 @@ const PosterGallery = () => {
       <div className="max-w-6xl mx-auto space-y-8">
         <div className="text-center space-y-4">
           <h2 className="font-handwritten text-4xl md:text-5xl font-bold text-foreground">
-            The Gallery
+            The Artistic Disclosure
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A visual archive of corporate accountability through artistic expression
+            A series of visual documents charting systemic patterns of alleged corporate abuse and contract violations
           </p>
         </div>
 
