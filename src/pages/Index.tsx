@@ -80,42 +80,43 @@ const Index = () => {
         </div>
       </section>
       {/* Submission Form Section */}
-      <section className="container mx-auto px-4 py-12 md:py-16">
-        <div className="max-w-3xl mx-auto space-y-6">
-          <div className="text-center space-y-4">
-            <h2 className="font-handwritten text-4xl md:text-5xl font-bold text-foreground">
-              Contribute Your Factual Testimony
-            </h2>
-            <p className="text-muted-foreground text-lg">
-              Your experience is the essential raw material for the next phase of visual documentation and public disclosure. Help us expand the archive of systemic patterns.
-            </p>
-          </div>
-          <Card className="bg-card/80 backdrop-blur-sm border-border overflow-hidden">
-            <CardContent className="p-0">
-              <div className="w-full flex justify-center">
-                <iframe
-                  src="https://docs.google.com/forms/d/e/1FAIpQLSfaq5gvT6rZ3Ru7hMdr340AI77SL8UvgoWnHBakw7AUSsdVpQ/viewform?embedded=true"
-                  width="640"
-                  height="500"
-                  frameBorder="0"
-                  marginHeight={0}
-                  marginWidth={0}
-                  className="border-0"
-                >
-                  Loading…
-                </iframe>
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="bg-primary/5 border-primary/20">
-            <CardContent className="p-4 md:p-6">
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Privacy Note:</strong> All submissions are reviewed and moderated for data integrity and relevance to the project's mandate. We respect your privacy: your personal information is treated as strictly confidential and will not be shared without your explicit written consent. You may, and are encouraged to, submit anonymously. All content must focus on factual, verifiable experiences that reveal systemic patterns rather than serving as personal attacks or emotional venting.
-              </p>
-            </CardContent>
-          </Card>
+<section className="container mx-auto px-4 py-12 md:py-16 bg-background/50"> {/* Added light bg for contrast */}
+  <div className="max-w-3xl mx-auto space-y-6">
+    <div className="text-center space-y-4">
+      <h2 className="font-handwritten text-4xl md:text-5xl font-bold text-foreground">
+        Contribute Your Factual Testimony
+      </h2>
+      <p className="text-muted-foreground text-lg">
+        Your experience is the essential raw material for the next phase of visual documentation and public disclosure. Help us expand the archive of systemic patterns.
+      </p>
+    </div>
+    <Card className="bg-white shadow-xl border-0 overflow-hidden rounded-lg"> {/* Solid white bg, stronger shadow, no border for cleaner look */}
+      <CardContent className="p-0">
+        <div className="w-full flex justify-center p-4 md:p-6"> {/* Added padding around iframe */}
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfaq5gvT6rZ3Ru7hMdr340AI77SL8UvgoWnHBakw7AUSsdVpQ/viewform?embedded=true"
+            width="100%" // Responsive width
+            height="600" // Slightly taller for better fit
+            frameBorder="0"
+            marginHeight={0}
+            marginWidth={0}
+            className="border-0 rounded" // Subtle rounding
+            style={{ minWidth: '320px', maxWidth: '640px' }} // Ensures mobile-friendly sizing
+          >
+            Loading…
+          </iframe>
         </div>
-      </section>
+      </CardContent>
+    </Card>
+    <Card className="bg-primary/5 border-primary/20">
+      <CardContent className="p-4 md:p-6">
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          <strong className="text-foreground">Privacy Note:</strong> All submissions are reviewed and moderated for data integrity and relevance to the project's mandate. We respect your privacy: your personal information is treated as strictly confidential and will not be shared without your explicit written consent. You may, and are encouraged to, submit anonymously. All content must focus on factual, verifiable experiences that reveal systemic patterns rather than serving as personal attacks or emotional venting.
+        </p>
+      </CardContent>
+    </Card>
+  </div>
+</section>
       <Footer setView={setView} />
     </div>
   );
