@@ -15,7 +15,7 @@ const Index = () => {
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h1 className="font-handwritten text-5xl md:text-7xl font-bold text-foreground leading-tight">
-            The Woolworst Artistic Accountability Project
+            Woolworst: The Artistic Accountability Project
           </h1>
           
           <Card className="bg-card/50 backdrop-blur-sm border-border shadow-lg">
