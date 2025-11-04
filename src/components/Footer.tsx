@@ -20,6 +20,15 @@ const Footer = ({ setView }: FooterProps) => {
               <ul className="space-y-2">
                 <li>
                   <button 
+                    onClick={() => setView('home')}
+                    className="text-muted-foreground hover:text-primary transition-colors bg-transparent border-none cursor-pointer"
+                    aria-label="Go to Home"
+                  >
+                    Home
+                  </button>
+                </li>
+                <li>
+                  <button 
                     onClick={() => setView('mission')}
                     className="text-muted-foreground hover:text-primary transition-colors bg-transparent border-none cursor-pointer"
                     aria-label="Go to Our Mission"
