@@ -84,7 +84,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center space-y-2">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Woolworst Project. An independent artistic accountability initiative.
+              © {currentYear} Woolworst. An independent artistic accountability initiative.
             </p>
             <p className="text-xs text-muted-foreground">
               Not affiliated with any corporation. All content represents individual perspectives.
