@@ -120,7 +120,7 @@ const Index = () => {
     </div>
   );
 
-  // Our Mission content
+  // Our Mission content (NZ spelling)
   const MissionContent = () => (
     <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
       <section className="container mx-auto px-4 py-16 md:py-24">
@@ -130,7 +130,7 @@ const Index = () => {
             <CardContent className="p-6 md:p-8">
               <div className="prose prose-invert prose-lg max-w-none space-y-4">
                 <p>
-                  This project began as a critical observation: corporations hold immense power over our daily lives, yet meaningful accountability mechanisms for workers remain elusive. Traditional channels for raising workplace issues—HR, internal systems, and union routes—often feel like shouting into the void. Woolworst is an independent artistic initiative dedicated to closing this accountability gap. Our process involves collecting and consolidating verified experiences of systemic corporate misconduct into a data archive. We use this unique, anonymized data set as the material for public-facing art and research designed to expose patterns of harm. Our mandate is not to pursue individual legal claims, but to generate incontrovertible, systemic documentation that compels greater public disclosure and regulatory scrutiny of corporate behavior.
+                  This project began as a critical observation: corporations hold immense power over our daily lives, yet meaningful accountability mechanisms for workers remain elusive. Traditional channels for raising workplace issues—HR, internal systems, and union routes—often feel like shouting into the void. Woolworst is an independent artistic initiative dedicated to closing this accountability gap. Our process involves collecting and consolidating verified experiences of systemic corporate misconduct into a data archive. We use this unique, anonymised data set as the material for public-facing art and research designed to expose patterns of harm. Our mandate is not to pursue individual legal claims, but to generate incontrovertible, systemic documentation that compels greater public disclosure and regulatory scrutiny of corporate behaviour.
                 </p>
               </div>
             </CardContent>
@@ -141,7 +141,7 @@ const Index = () => {
     </div>
   );
 
-  // Community Guidelines content
+  // Community Guidelines content (NZ spelling)
   const GuidelinesContent = () => (
     <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
       <section className="container mx-auto px-4 py-16 md:py-24">
@@ -151,7 +151,7 @@ const Index = () => {
             <CardContent className="p-6 md:p-8">
               <div className="prose prose-invert prose-lg max-w-none space-y-4">
                 <p>
-                  These guidelines are essential for maintaining the integrity and legal defensibility of our archive. We are collecting factual, verifiable data to inform an artistic and research project. We require that all submissions focus on systemic patterns of misconduct within the workplace (e.g., wage theft, health and safety failures, policy abuse). Do not submit personal opinions, emotionally charged language, or speculative claims; we only require factual testimony, dates, and locations. Anonymity is your firewall, but data integrity is ours. We reserve the right to moderate, edit, or reject any submission that contains hate speech, defamation, or unsubstantiated claims that would compromise the integrity of our artistic and research mandate. By submitting, you grant this independent artistic initiative a perpetual, non-exclusive right to use your anonymized, non-personal data for public display, artistic production, and systemic analysis.
+                  These guidelines are essential for maintaining the integrity and legal defensibility of our archive. We are collecting factual, verifiable data to inform an artistic and research project. We require that all submissions focus on systemic patterns of misconduct within the workplace (e.g., wage theft, health and safety failures, policy abuse). Do not submit personal opinions, emotionally charged language, or speculative claims; we only require factual testimony, dates, and locations. Anonymity is your firewall, but data integrity is ours. We reserve the right to moderate, edit, or reject any submission that contains hate speech, defamation, or unsubstantiated claims that would compromise the integrity of our artistic and research mandate. By submitting, you grant this independent artistic initiative a perpetual, non-exclusive right to use your anonymised, non-personal data for public display, artistic production, and systemic analysis.
                 </p>
               </div>
             </CardContent>
@@ -162,7 +162,7 @@ const Index = () => {
     </div>
   );
 
-  // FAQ content
+  // FAQ content (NZ spelling)
   const FAQContent = () => (
     <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
       <section className="container mx-auto px-4 py-16 md:py-24">
@@ -181,7 +181,7 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground text-lg mb-2">What is done with the data?</h3>
-                  <p className="text-muted-foreground">Your anonymized testimony is cross-referenced with other data points to identify systemic patterns. These patterns are then used as the basis for public art installations, data visualization, and research reports intended to increase public awareness and regulatory pressure.</p>
+                  <p className="text-muted-foreground">Your anonymised testimony is cross-referenced with other data points to identify systemic patterns. These patterns are then used as the basis for public art installations, data visualisation, and research reports intended to increase public awareness and regulatory pressure.</p>
                 </div>
               </div>
             </CardContent>
@@ -192,7 +192,7 @@ const Index = () => {
     </div>
   );
 
-  // Privacy Policy content
+  // Privacy Policy content (NZ spelling)
   const PrivacyContent = () => (
     <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
       <section className="container mx-auto px-4 py-16 md:py-24">
@@ -202,7 +202,7 @@ const Index = () => {
             <CardContent className="p-6 md:p-8">
               <div className="prose prose-invert prose-lg max-w-none space-y-4">
                 <p>
-                  We prioritise your anonymity. This project is focused on collecting systemic patterns, not identifying individuals. We do not require, and strongly discourage you from submitting, any personally identifiable information (PII) such as full names, contact details, employee IDs, or specific addresses unless absolutely essential to verifying systemic patterns. All submitted data is immediately stripped of any identifying markers and stored securely as an anonymized research asset. We do not sell, rent, or distribute your raw data to any third parties. We only share aggregate, anonymized findings in public forums, artistic displays, and research publications.
+                  We prioritise your anonymity. This project is focussed on collecting systemic patterns, not identifying individuals. We do not require, and strongly discourage you from submitting, any personally identifiable information (PII) such as full names, contact details, employee IDs, or specific addresses unless absolutely essential to verifying systemic patterns. All submitted data is immediately stripped of any identifying markers and stored securely as an anonymised research asset. We do not sell, rent, or distribute your raw data to any third parties. We only share aggregate, anonymised findings in public forums, artistic displays, and research publications.
                 </p>
               </div>
             </CardContent>
@@ -213,7 +213,7 @@ const Index = () => {
     </div>
   );
 
-  // Disclaimer content
+  // Disclaimer content (NZ spelling)
   const DisclaimerContent = () => (
     <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
       <section className="container mx-auto px-4 py-16 md:py-24">
