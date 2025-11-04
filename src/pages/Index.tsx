@@ -104,28 +104,18 @@ const Index = () => {
 
           <Card className="bg-card/80 backdrop-blur-sm border-border overflow-hidden">
             <CardContent className="p-0">
-              {/* Google Form Embed Placeholder */}
-              <div className="aspect-[4/3] bg-muted/20 flex items-center justify-center p-8">
-                <div className="text-center space-y-4">
-                  <p className="text-muted-foreground">
-                    Google Form will be embedded here
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    Replace with actual Google Form iframe code
-                  </p>
-                  {/* Example iframe structure - replace src with actual form URL */}
-                  {/* <iframe 
-                    src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true" 
-                    width="100%" 
-                    height="100%" 
-                    frameBorder="0" 
-                    marginHeight={0} 
-                    marginWidth={0}
-                    className="min-h-[800px]"
-                  >
-                    Loading…
-                  </iframe> */}
-                </div>
+              <div className="w-full flex justify-center">
+                <iframe 
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSfaq5gvT6rZ3Ru7hMdr340AI77SL8UvgoWnHBakw7AUSsdVpQ/viewform?embedded=true" 
+                  width="640" 
+                  height="1170" 
+                  frameBorder="0" 
+                  marginHeight={0} 
+                  marginWidth={0}
+                  className="border-0"
+                >
+                  Loading…
+                </iframe>
               </div>
             </CardContent>
           </Card>
