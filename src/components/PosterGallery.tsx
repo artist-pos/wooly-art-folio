@@ -3,33 +3,33 @@ import { Card, CardContent } from "@/components/ui/card";
 const posters = [
   {
     id: 1,
-    title: "The Wool Incident",
-    caption: "When quality promises met reality - A documentation of product standards over time",
-    imageAlt: "Artistic poster depicting wool quality comparison"
+    title: "The Truth Behind Woolworst",
+    caption: "Documenting the alleged systemic failure across employee safety, contract integrity, racial equity, and the protection of misconduct.",
+    imageAlt: "Poster documenting systemic failures at Woolworst"
   },
   {
     id: 2,
-    title: "Customer Service Chronicles",
-    caption: "Mapping the journey from complaint to resolution - or lack thereof",
-    imageAlt: "Infographic poster showing customer service response patterns"
+    title: "The Fresh Food People... break their bodies",
+    caption: "Tracking the human cost of understaffing; examining claims of buried injury reports and long-term physical compromise.",
+    imageAlt: "Poster showing the human cost of understaffing"
   },
   {
     id: 3,
-    title: "The Price Evolution",
-    caption: "Tracking value propositions across seasons and market conditions",
-    imageAlt: "Data visualization poster of pricing trends"
+    title: "A Fresh Way to Save... violating contracts",
+    caption: "Exposing the alleged corporate strategy of using low-hour contracts (e.g., 15.5 hours) to systematically deny full-time status and security.",
+    imageAlt: "Poster exposing contract violations"
   },
   {
     id: 4,
-    title: "Sustainability Claims",
-    caption: "Examining environmental promises through the lens of actual practices",
-    imageAlt: "Environmental impact comparison poster"
+    title: "That's Today's Fresh Food People... shielding abusers",
+    caption: "Investigating the alleged culture of protected misconduct, nepotism, and the failure of HR to address internal harassment claims.",
+    imageAlt: "Poster investigating protected misconduct"
   },
   {
     id: 5,
-    title: "The Community Speaks",
-    caption: "Aggregated experiences from shoppers across the nation",
-    imageAlt: "Collage poster featuring community testimonials"
+    title: "We Can Help With That... forging your documents",
+    caption: "Detailing the most serious claims of alleged document fraud, including pre-filled health and safety forms designed to shield the company from liability.",
+    imageAlt: "Poster detailing alleged document fraud"
   }
 ];
 
