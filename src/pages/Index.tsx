@@ -8,8 +8,10 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   const [isStoryOpen, setIsStoryOpen] = useState(false);
+  const [currentView, setView] = useState('home');
 
-  return (
+  // Home content (your original layout)
+  const HomeContent = () => (
     <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 md:py-24">
@@ -17,7 +19,7 @@ const Index = () => {
           <h1 className="font-handwritten text-5xl md:text-7xl font-bold text-foreground leading-tight">
             Woolworst: The Artistic Accountability Project
           </h1>
-          
+         
           <Card className="bg-card/50 backdrop-blur-sm border-border shadow-lg">
             <CardContent className="p-6 md:p-8">
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
@@ -27,48 +29,46 @@ const Index = () => {
           </Card>
         </div>
       </section>
-
       {/* Poster Gallery */}
       <PosterGallery />
-
       {/* Story Section */}
       <section className="container mx-auto px-4 py-12 md:py-16">
         <div className="max-w-3xl mx-auto">
           <Collapsible open={isStoryOpen} onOpenChange={setIsStoryOpen}>
             <CollapsibleTrigger asChild>
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="w-full justify-between text-lg font-handwritten py-6 border-2 hover:bg-primary/10"
               >
                 <span>Read the Full Story</span>
                 <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${isStoryOpen ? 'rotate-180' : ''}`} />
               </Button>
             </CollapsibleTrigger>
-            
+           
             <CollapsibleContent className="mt-6">
               <Card className="bg-card/80 backdrop-blur-sm border-border">
                 <CardContent className="p-6 md:p-8 space-y-4 text-foreground">
                   <h2 className="font-handwritten text-3xl md:text-4xl font-bold text-primary">
                     The Beginning
                   </h2>
-                  
+                 
                   <div className="prose prose-invert prose-lg max-w-none space-y-4">
                     <p>
                       This project began as a critical observation: corporations hold immense power over our daily lives, yet meaningful accountability mechanisms for workers remain elusive. Traditional channels for raising workplace issues—HR, internal systems, and union routes—often feel like shouting into the void.
                     </p>
-                    
+                   
                     <p>
                       The Woolworst initiative transforms the challenge of corporate opacity into creative documentation. This platform provides a non-legal archive for experiences, patterns, and collective testimony, ensuring that accounts of alleged contract fraud, health and safety failures, and cultural misconduct do not simply vanish.
                     </p>
-                    
+                   
                     <p>
                       Each submission is a factual data point utilised as raw material for visual arts and public analysis. Together, these accounts chart the systemic patterns that transcend any single individual complaint.
                     </p>
-                    
+                   
                     <p>
                       This is not a tool for litigation or attack. It operates solely in the protected public interest of visibility, memory, and artistic disclosure. When companies recognise that their operational failures are contributing to a permanent, public record, their behaviour is compelled to change.
                     </p>
-                    
+                   
                     <p>
                      We believe in the transformative power of independent documentation to foster a more transparent relationship between large entities and the workforce that sustains them.
                     </p>
@@ -79,7 +79,6 @@ const Index = () => {
           </Collapsible>
         </div>
       </section>
-
       {/* Submission Form Section */}
       <section className="container mx-auto px-4 py-12 md:py-16">
         <div className="max-w-3xl mx-auto space-y-6">
@@ -91,16 +90,15 @@ const Index = () => {
               Your experience is the essential raw material for the next phase of visual documentation and public disclosure. Help us expand the archive of systemic patterns.
             </p>
           </div>
-
           <Card className="bg-card/80 backdrop-blur-sm border-border overflow-hidden">
             <CardContent className="p-0">
               <div className="w-full flex justify-center">
-                <iframe 
-                  src="https://docs.google.com/forms/d/e/1FAIpQLSfaq5gvT6rZ3Ru7hMdr340AI77SL8UvgoWnHBakw7AUSsdVpQ/viewform?embedded=true" 
-                  width="640" 
-                  height="500" 
-                  frameBorder="0" 
-                  marginHeight={0} 
+                <iframe
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSfaq5gvT6rZ3Ru7hMdr340AI77SL8UvgoWnHBakw7AUSsdVpQ/viewform?embedded=true"
+                  width="640"
+                  height="500"
+                  frameBorder="0"
+                  marginHeight={0}
                   marginWidth={0}
                   className="border-0"
                 >
@@ -109,7 +107,6 @@ const Index = () => {
               </div>
             </CardContent>
           </Card>
-
           <Card className="bg-primary/5 border-primary/20">
             <CardContent className="p-4 md:p-6">
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -119,10 +116,139 @@ const Index = () => {
           </Card>
         </div>
       </section>
-
-      <Footer />
+      <Footer setView={setView} />
     </div>
   );
+
+  // Placeholder for Mission page (replace with actual content)
+  const MissionContent = () => (
+    <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
+      <section className="container mx-auto px-4 py-16 md:py-24">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <h1 className="font-handwritten text-5xl md:text-7xl font-bold text-foreground">Our Mission</h1>
+          <Card className="bg-card/50 backdrop-blur-sm border-border shadow-lg">
+            <CardContent className="p-6 md:p-8">
+              <div className="prose prose-invert prose-lg max-w-none space-y-4">
+                <p>
+                  Woolworst is dedicated to artistic accountability, transforming personal testimonies into visual archives that expose systemic corporate failures. Our mission is to foster transparency through creative documentation, ensuring voices are heard and patterns are revealed.
+                </p>
+                {/* Add more mission details here */}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+      <Footer setView={setView} />
+    </div>
+  );
+
+  // Placeholder for Guidelines page (replace with actual content)
+  const GuidelinesContent = () => (
+    <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
+      <section className="container mx-auto px-4 py-16 md:py-24">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <h1 className="font-handwritten text-5xl md:text-7xl font-bold text-foreground">Community Guidelines</h1>
+          <Card className="bg-card/50 backdrop-blur-sm border-border shadow-lg">
+            <CardContent className="p-6 md:p-8">
+              <div className="prose prose-invert prose-lg max-w-none space-y-4">
+                <p>
+                  We encourage respectful, factual contributions that align with our mandate. All submissions must focus on verifiable experiences and avoid personal attacks.
+                </p>
+                {/* Add full guidelines here */}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+      <Footer setView={setView} />
+    </div>
+  );
+
+  // Placeholder for FAQ page (replace with actual content)
+  const FAQContent = () => (
+    <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
+      <section className="container mx-auto px-4 py-16 md:py-24">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <h1 className="font-handwritten text-5xl md:text-7xl font-bold text-foreground">FAQ</h1>
+          <Card className="bg-card/50 backdrop-blur-sm border-border shadow-lg">
+            <CardContent className="p-6 md:p-8">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="font-semibold text-foreground">What is Woolworst?</h3>
+                  <p className="text-muted-foreground">An artistic accountability initiative.</p>
+                </div>
+                {/* Add more Q&A here */}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+      <Footer setView={setView} />
+    </div>
+  );
+
+  // Placeholder for Privacy page (replace with actual content)
+  const PrivacyContent = () => (
+    <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
+      <section className="container mx-auto px-4 py-16 md:py-24">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <h1 className="font-handwritten text-5xl md:text-7xl font-bold text-foreground">Privacy Policy</h1>
+          <Card className="bg-card/50 backdrop-blur-sm border-border shadow-lg">
+            <CardContent className="p-6 md:p-8">
+              <div className="prose prose-invert prose-lg max-w-none space-y-4">
+                <p>
+                  We prioritize your privacy. Submissions are confidential, and anonymous options are available. Data is used only for artistic documentation.
+                </p>
+                {/* Add full policy here */}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+      <Footer setView={setView} />
+    </div>
+  );
+
+  // Placeholder for Disclaimer page (replace with actual content)
+  const DisclaimerContent = () => (
+    <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
+      <section className="container mx-auto px-4 py-16 md:py-24">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <h1 className="font-handwritten text-5xl md:text-7xl font-bold text-foreground">Disclaimer</h1>
+          <Card className="bg-card/50 backdrop-blur-sm border-border shadow-lg">
+            <CardContent className="p-6 md:p-8">
+              <div className="prose prose-invert prose-lg max-w-none space-y-4">
+                <p>
+                  This project is independent and non-affiliated. Content represents individual perspectives and is not legal advice.
+                </p>
+                {/* Add full disclaimer here; note: this overlaps with hero disclaimer, so expand if needed */}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+      <Footer setView={setView} />
+    </div>
+  );
+
+  const renderContent = () => {
+    switch (currentView) {
+      case 'mission':
+        return <MissionContent />;
+      case 'guidelines':
+        return <GuidelinesContent />;
+      case 'faq':
+        return <FAQContent />;
+      case 'privacy':
+        return <PrivacyContent />;
+      case 'disclaimer':
+        return <DisclaimerContent />;
+      default:
+        return <HomeContent />;
+    }
+  };
+
+  return renderContent();
 };
 
 export default Index;
