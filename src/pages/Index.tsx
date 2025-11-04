@@ -98,7 +98,7 @@ const Index = () => {
               Contribute Your Factual Testimony
             </h2>
             <p className="text-muted-foreground text-lg">
-              Your experience is the essential raw material for the next phase of **visual documentation and public disclosure.** Help us expand the archive of systemic patterns.
+              Your experience is the essential raw material for the next phase of visual documentation and public disclosure. Help us expand the archive of systemic patterns.
             </p>
           </div>
 
