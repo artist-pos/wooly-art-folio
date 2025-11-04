@@ -108,7 +108,7 @@ const Index = () => {
                 <iframe 
                   src="https://docs.google.com/forms/d/e/1FAIpQLSfaq5gvT6rZ3Ru7hMdr340AI77SL8UvgoWnHBakw7AUSsdVpQ/viewform?embedded=true" 
                   width="640" 
-                  height="1170" 
+                  height="500" 
                   frameBorder="0" 
                   marginHeight={0} 
                   marginWidth={0}
