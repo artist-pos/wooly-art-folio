@@ -54,33 +54,23 @@ const Index = () => {
                   
                   <div className="prose prose-invert prose-lg max-w-none space-y-4">
                     <p>
-                      This project began as a simple observation: corporations hold immense power over our 
-                      daily lives, yet meaningful accountability mechanisms remain elusive. Traditional channels 
-                      for consumer feedback often feel like shouting into the void.  
+                      This project began as a critical observation: while major corporations exert vast power over employees and communities, robust accountability for systemic alleged misconduct remains elusive. Traditional reporting channels—HR, internal systems, and customer service logs—are often designed to absorb and silence complaints.
                     </p>
                     
                     <p>
-                      The Woolworst initiative transforms frustration into creative documentation. Rather than 
-                      silent acceptance or angry tweets that disappear into the digital ether, this platform 
-                      provides a lasting archive of experiences, patterns, and collective observations.
+                      The Woolworst initiative transforms the challenge of corporate opacity into creative documentation. This platform provides a non-legal archive for experiences, patterns, and collective testimony, ensuring that accounts of alleged contract fraud, health and safety failures, and cultural misconduct do not simply vanish.
                     </p>
                     
                     <p>
-                      Each poster, each submission, represents a moment where someone decided their experience 
-                      mattered enough to document. Together, these individual moments create a mosaic of 
-                      corporate behavior that transcends any single complaint.
+                      Each submission is a factual data point utilised as raw material for visual arts and public analysis. Together, these accounts chart the systemic patterns that transcend any single individual complaint.
                     </p>
                     
                     <p>
-                      This is not about cancel culture or vindictive attacks. It's about visibility, memory, 
-                      and the power of artistic expression to hold a mirror to corporate practices. When 
-                      companies know their actions become part of a permanent, public record—not buried in 
-                      customer service logs—behavior changes.
+                      This is not a tool for litigation or attack. It operates solely in the protected public interest of visibility, memory, and artistic disclosure. When companies recognise that their operational failures are contributing to a permanent, public record, their behaviour is compelled to change.
                     </p>
                     
                     <p>
-                      We believe in the transformative power of creative accountability. Every submission helps 
-                      build a more transparent relationship between corporations and the communities they serve.
+                     We believe in the transformative power of independent documentation to foster a more transparent relationship between large entities and the workforce that sustains them.
                     </p>
                   </div>
                 </CardContent>
