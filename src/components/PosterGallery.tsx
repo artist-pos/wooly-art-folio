@@ -1,8 +1,4 @@
-import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
 import poster1 from "@/assets/poster-1.png";
 import poster2 from "@/assets/poster-2.png";
 import poster3 from "@/assets/poster-3.png";
@@ -15,10 +11,41 @@ const posters = [
     title: "The Truth Behind Woolworst",
     caption: "Documenting the alleged systemic failure across employee safety, contract integrity, racial equity, and the protection of misconduct. 3.1k+ LinkedIn impressions in 3 weeks.",
     imageAlt: "Poster documenting systemic failures at Woolworst",
-    image: poster1,
-    hasStory: true,
-    storyTitle: "The Truth Behind Woolworst",
-    storyContent: `"Taste the racism."
+    image: poster1
+  },
+  {
+    id: 2,
+    title: "The Fresh Food People... break their bodies",
+    caption: "Tracking the human cost of understaffing; examining claims of buried injury reports and long-term physical compromise.",
+    imageAlt: "Poster showing the human cost of understaffing",
+    image: poster2
+  },
+  {
+    id: 3,
+    title: "A Fresh Way to Save... violating contracts",
+    caption: "Exposing the alleged corporate strategy of using low-hour contracts to systematically deny full-time status and security.",
+    imageAlt: "Poster exposing contract violations",
+    image: poster3
+  },
+  {
+    id: 4,
+    title: "That's Today's Fresh Food People... shielding abusers",
+    caption: "Investigating the alleged culture of protected misconduct, nepotism, and the failure of HR to address internal harassment claims.",
+    imageAlt: "Poster investigating protected misconduct",
+    image: poster4
+  },
+  {
+    id: 5,
+    title: "We Can Help With That... forging your documents",
+    caption: "Detailing the most serious claims of alleged document fraud, including pre-filled health and safety forms designed to shield the company from liability.",
+    imageAlt: "Poster detailing alleged document fraud",
+    image: poster5
+  }
+];
+
+export const linkedInStory = {
+  title: "The Truth Behind Woolworst",
+  content: `"Taste the racism."
 
 After nearly four years inside @Woolworths, yesterday was my final day. This is not a metaphor. It is a testament to the systematic rot within the stores.
 
@@ -63,40 +90,9 @@ This is the Woolworths way.
 Exploit. Injure. Gaslight. Discard.
 
 My 'Woolworst' poster is my testimony—the visual proof of their poison. I have a platform. This is for the hundreds who don't. For everyone who has been told their pain isn't real and their voice doesn't count.`
-  },
-  {
-    id: 2,
-    title: "The Fresh Food People... break their bodies",
-    caption: "Tracking the human cost of understaffing; examining claims of buried injury reports and long-term physical compromise.",
-    imageAlt: "Poster showing the human cost of understaffing",
-    image: poster2
-  },
-  {
-    id: 3,
-    title: "A Fresh Way to Save... violating contracts",
-    caption: "Exposing the alleged corporate strategy of using low-hour contracts to systematically deny full-time status and security.",
-    imageAlt: "Poster exposing contract violations",
-    image: poster3
-  },
-  {
-    id: 4,
-    title: "That's Today's Fresh Food People... shielding abusers",
-    caption: "Investigating the alleged culture of protected misconduct, nepotism, and the failure of HR to address internal harassment claims.",
-    imageAlt: "Poster investigating protected misconduct",
-    image: poster4
-  },
-  {
-    id: 5,
-    title: "We Can Help With That... forging your documents",
-    caption: "Detailing the most serious claims of alleged document fraud, including pre-filled health and safety forms designed to shield the company from liability.",
-    imageAlt: "Poster detailing alleged document fraud",
-    image: poster5
-  }
-];
+};
 
 const PosterGallery = () => {
-  const [openStoryId, setOpenStoryId] = useState<number | null>(null);
-
   return (
     <section className="container mx-auto px-4 py-12 md:py-16">
       <div className="max-w-6xl mx-auto space-y-8">
@@ -137,42 +133,13 @@ const PosterGallery = () => {
                 </div>
                 
                 {/* Caption */}
-                <div className="p-4 md:p-6 space-y-3">
+                <div className="p-4 md:p-6 space-y-2">
                   <h3 className="font-handwritten text-xl md:text-2xl font-bold text-foreground">
                     {poster.title}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {poster.caption}
                   </p>
-                  
-                  {/* Story Dropdown */}
-                  {poster.hasStory && (
-                    <Collapsible 
-                      open={openStoryId === poster.id} 
-                      onOpenChange={(isOpen) => setOpenStoryId(isOpen ? poster.id : null)}
-                    >
-                      <CollapsibleTrigger asChild>
-                        <Button 
-                          variant="outline" 
-                          className="w-full justify-between text-sm font-handwritten mt-2"
-                        >
-                          <span>The Original LinkedIn Post</span>
-                          <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${openStoryId === poster.id ? 'rotate-180' : ''}`} />
-                        </Button>
-                      </CollapsibleTrigger>
-                      
-                      <CollapsibleContent className="mt-3">
-                        <div className="bg-muted/30 rounded-lg p-4 space-y-3">
-                          <h4 className="font-handwritten text-lg font-bold text-foreground">
-                            {poster.storyTitle}
-                          </h4>
-                          <div className="text-sm text-foreground/90 whitespace-pre-line leading-relaxed">
-                            {poster.storyContent}
-                          </div>
-                        </div>
-                      </CollapsibleContent>
-                    </Collapsible>
-                  )}
                 </div>
               </CardContent>
             </Card>
