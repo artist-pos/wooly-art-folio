@@ -5,11 +5,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronDown } from "lucide-react";
-import poster1 from "@/assets/poster-1.png";
-import poster2 from "@/assets/poster-2.png";
-import poster3 from "@/assets/poster-3.png";
-import poster4 from "@/assets/poster-4.png";
-import poster5 from "@/assets/poster-5.png";
+import poster1 from "../assets/poster-1.png";
+import poster2 from "../assets/poster-2.png";
+import poster3 from "../assets/poster-3.png";
+import poster4 from "../assets/poster-4.png";
+import poster5 from "../assets/poster-5.png";
 const posters = [
     {
         id: 1,
