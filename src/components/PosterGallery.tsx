@@ -9,7 +9,7 @@ const posters = [
   {
     id: 1,
     title: "The Truth Behind Woolworst",
-    caption: "Documenting the alleged systemic failure across employee safety, contract integrity, racial equity, and the protection of misconduct. 3.1k+ LinkedIn impressions in 3 weeks.",
+        caption: "Documenting the alleged systemic failure across employee safety, contract integrity, racial equity, and the protection of misconduct. <strong>3.1k+ LinkedIn impressions in 3 weeks.<strong>",
     imageAlt: "Poster documenting systemic failures at Woolworst",
     image: poster1
   },

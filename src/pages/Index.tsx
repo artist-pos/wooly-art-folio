@@ -167,30 +167,29 @@ My 'Woolworst' poster is my testimony—the visual proof of their poison. I have
         </div>
       </section>
 
-      {/* Submission Form Section */}
-      <section className="container mx-auto px-4 py-12 md:py-16">
-        <div className="max-w-3xl mx-auto space-y-6">
-          <div className="text-center space-y-4">
-            <h2 className="font-handwritten text-4xl md:text-5xl font-bold text-foreground">
-              Contribute Your Factual Testimony
-            </h2>
-            <p className="text-muted-foreground text-lg">
-              Your experience is the essential raw material for the next phase of visual documentation and public disclosure. Help us expand the archive of systemic patterns.
-            </p>
-          </div>
-
-          <Card className="bg-card/80 backdrop-blur-sm border-border overflow-hidden">
-            <CardContent className="p-0 bg-white">
-              <div className="w-full flex justify-center">
-                <iframe 
-                  src="https://docs.google.com/forms/d/e/1FAIpQLSfaq5gvT6rZ3Ru7hMdr340AI77SL8UvgoWnHBakw7AUSsdVpQ/viewform?embedded=true" 
-                  width="640" 
-                  height="1170" 
-                  frameBorder="0" 
-                  marginHeight={0} 
-                  marginWidth={0}
-                  className="border-0"
-                >
+          <section className="container mx-auto px-4 py-12 md:py-16 bg-background/50"> {/* Added light bg for contrast */}
+              <div className="max-w-3xl mx-auto space-y-6">
+                  <div className="text-center space-y-4">
+                      <h2 className="font-handwritten text-4xl md:text-5xl font-bold text-foreground">
+                          Contribute Your Factual Testimony
+                      </h2>
+                      <p className="text-muted-foreground text-lg">
+                          Your experience is the essential raw material for the next phase of visual documentation and public disclosure. Help us expand the archive of systemic patterns.
+                      </p>
+                  </div>
+                  <Card className="bg-white shadow-xl border-0 overflow-hidden rounded-lg"> {/* Solid white bg, stronger shadow, no border for cleaner look */}
+                      <CardContent className="p-0">
+                          <div className="w-full flex justify-center p-4 md:p-6"> {/* Added padding around iframe */}
+                              <iframe
+                                  src="https://docs.google.com/forms/d/e/1FAIpQLSfaq5gvT6rZ3Ru7hMdr340AI77SL8UvgoWnHBakw7AUSsdVpQ/viewform?embedded=true"
+                                  width="100%" // Responsive width
+                                  height="600" // Slightly taller for better fit
+                                  frameBorder="0"
+                                  marginHeight={0}
+                                  marginWidth={0}
+                                  className="border-0 rounded" // Subtle rounding
+                                  style={{ minWidth: '320px', maxWidth: '640px' }} // Ensures mobile-friendly sizing
+                              >
                   Loading…
                 </iframe>
               </div>
