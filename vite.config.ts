@@ -15,9 +15,14 @@ export default defineConfig(({ mode }) => ({
             "@": path.resolve(__dirname, "./src"),
         },
     },
-    base: '/wooly-art-folio/', // GH Pages repo path—removes on custom domain
+    base: '/wooly-art-folio/', // For GH Pages (ignored on custom domain)
     build: {
         outDir: 'dist',
-        sourcemap: true, // Optional: For easier debugging
+        sourcemap: true,
+    },
+    preview: {
+        // Disable hash for preview/deploy
+        port: 4173,
+        open: true,
     },
 }));
