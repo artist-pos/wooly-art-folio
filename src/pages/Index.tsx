@@ -7,7 +7,9 @@ import PosterGallery from "@/components/PosterGallery";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  const [isLinkedInPostOpen, setIsLinkedInPostOpen] = useState(false);
   const [isStoryOpen, setIsStoryOpen] = useState(false);
+  const [currentView, setCurrentView] = useState<string>("home");
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
@@ -15,7 +17,7 @@ const Index = () => {
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h1 className="font-handwritten text-5xl md:text-7xl font-bold text-foreground leading-tight">
-            The Woolworst Artistic Accountability Project
+            Woolworst: The artistic accountability project
           </h1>
           
           <Card className="bg-card/50 backdrop-blur-sm border-border shadow-lg">
@@ -34,14 +36,14 @@ const Index = () => {
       {/* LinkedIn Post Section */}
       <section className="container mx-auto px-4 py-12 md:py-16">
         <div className="max-w-3xl mx-auto">
-          <Collapsible open={isStoryOpen} onOpenChange={setIsStoryOpen}>
+          <Collapsible open={isLinkedInPostOpen} onOpenChange={setIsLinkedInPostOpen}>
             <CollapsibleTrigger asChild>
               <Button 
                 variant="outline" 
                 className="w-full justify-between text-lg font-handwritten py-6 border-2 hover:bg-primary/10"
               >
                 <span>The Original LinkedIn Post</span>
-                <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${isStoryOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${isLinkedInPostOpen ? 'rotate-180' : ''}`} />
               </Button>
             </CollapsibleTrigger>
             
@@ -185,7 +187,7 @@ My 'Woolworst' poster is my testimony—the visual proof of their poison. I have
                 <iframe 
                   src="https://docs.google.com/forms/d/e/1FAIpQLSfaq5gvT6rZ3Ru7hMdr340AI77SL8UvgoWnHBakw7AUSsdVpQ/viewform?embedded=true" 
                   width="640" 
-                  height="1170" 
+                  height="500" 
                   frameBorder="0" 
                   marginHeight={0} 
                   marginWidth={0}
@@ -199,7 +201,7 @@ My 'Woolworst' poster is my testimony—the visual proof of their poison. I have
         </div>
       </section>
 
-      <Footer />
+      <Footer setView={setCurrentView} />
     </div>
   );
 };
