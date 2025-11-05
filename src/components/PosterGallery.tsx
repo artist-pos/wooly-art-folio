@@ -1,4 +1,5 @@
 // components/PosterGallery.tsx
+import { useState } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
@@ -8,12 +9,11 @@ import poster2 from "@/assets/poster-2.png";
 import poster3 from "@/assets/poster-3.png";
 import poster4 from "@/assets/poster-4.png";
 import poster5 from "@/assets/poster-5.png";
-
 const posters = [
     {
         id: 1,
         title: "The Truth Behind Woolworst",
-        caption: "Documenting the alleged systemic failure across employee safety, contract integrity, racial equity, and the protection of misconduct. <strong>3.1k+ LinkedIn impressions</strong> in the 3 weeks.",
+        caption: "Documenting the alleged systemic failure across employee safety, contract integrity, racial equity, and the protection of misconduct. <strong>3.1k+ LinkedIn impressions in 3 weeks.<strong>",
         imageAlt: "Poster documenting systemic failures at Woolworst",
         image: poster1
     },
@@ -46,10 +46,8 @@ const posters = [
         image: poster5
     }
 ];
-
 const PosterGallery = () => {
     const [isLinkedInOpen, setIsLinkedInOpen] = useState(false);
-
     return (
         <section className="container mx-auto px-4 py-12 md:py-16">
             <div className="max-w-6xl mx-auto space-y-8">
@@ -87,7 +85,6 @@ const PosterGallery = () => {
                                         </div>
                                     )}
                                 </div>
-
                                 {/* Caption */}
                                 <div className="p-4 md:p-6 space-y-2">
                                     <h3 className="font-handwritten text-xl md:text-2xl font-bold text-foreground">
@@ -99,7 +96,6 @@ const PosterGallery = () => {
                         </Card>
                     ))}
                 </div>
-
                 {/* Collapsible for Original LinkedIn Post */}
                 <div className="max-w-3xl mx-auto">
                     <Collapsible open={isLinkedInOpen} onOpenChange={setIsLinkedInOpen}>
@@ -112,16 +108,13 @@ const PosterGallery = () => {
                                 <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${isLinkedInOpen ? 'rotate-180' : ''}`} />
                             </Button>
                         </CollapsibleTrigger>
-
                         <CollapsibleContent className="mt-6">
                             <Card className="bg-card/80 backdrop-blur-sm border-border">
                                 <CardContent className="p-6 md:p-8 space-y-4 text-foreground">
                                     <h3 className="font-handwritten text-2xl md:text-3xl font-bold text-primary">
-                                        The Spark That Started It All (6 October 2025)
+                                        The Truth Behind Woolworst (6 October 2025)
                                     </h3>
-
                                     <div className="prose prose-invert prose-lg max-w-none space-y-4">
-                                        <p><strong>The Truth Behind Woolworst</strong></p>
                                         <p>"Taste the racism."</p>
                                         <p>After nearly four years inside @Woolworths, yesterday was my final day. This is not a metaphor. It is a testament to the systematic rot within the stores.</p>
                                         <p>It begins with the calculated breaking of bodies.</p>
@@ -140,7 +133,7 @@ const PosterGallery = () => {
                                         <p>The gaslighting is the glue.</p>
                                         <p>Health and Safety is a sick joke. Our safety documents were not just ignored—they were pre-forged. We were given the forms with the answers already filled in, a fraudulent checkbox exercise designed to protect the company, not the workers.</p>
                                         <p>A manager would come to work drunk, disappear for Uber Eats runs, then scream at us to work faster.</p>
-                                        <p>After a "restructure," I was demoted and ordered to train the very people who replaced me. When I refused, I screamed at in front of customers and suppliers: "You never taught anyone anyway."</p>
+                                        <p>After a "restructure," I was demoted and ordered to train the very people who replaced me. When I refused, I was screamed at in front of customers and suppliers: "You never taught anyone anyway."</p>
                                         <p>They break you, then blame you for the pieces.</p>
                                         <p>This is the Woolworths way.</p>
                                         <p>Exploit. Injure. Gaslight. Discard.</p>
@@ -155,5 +148,4 @@ const PosterGallery = () => {
         </section>
     );
 };
-
 export default PosterGallery;
