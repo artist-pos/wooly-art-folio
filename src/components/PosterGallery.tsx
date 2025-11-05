@@ -9,7 +9,7 @@ const posters = [
   {
     id: 1,
     title: "The Truth Behind Woolworst",
-    caption: "Documenting the alleged systemic failure across employee safety, contract integrity, racial equity, and the protection of misconduct. 3.1k+ LinkedIn impressions in 3 weeks.",
+    caption: "Documenting the alleged systemic failure across employee safety, contract integrity, racial equity, and the protection of misconduct. **3.1k+ LinkedIn impressions in 3 weeks.**",
     imageAlt: "Poster documenting systemic failures at Woolworst",
     image: poster1
   },
@@ -138,7 +138,9 @@ const PosterGallery = () => {
                     {poster.title}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    {poster.caption}
+                    {poster.caption.split('**').map((part, index) => 
+                      index % 2 === 1 ? <strong key={index}>{part}</strong> : part
+                    )}
                   </p>
                 </div>
               </CardContent>
