@@ -11,13 +11,158 @@ const Index = () => {
   const [isStoryOpen, setIsStoryOpen] = useState(false);
   const [currentView, setCurrentView] = useState<string>("home");
 
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
+  // Content for different views
+  const renderContent = () => {
+    switch (currentView) {
+      case 'mission':
+        return (
+          <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
+            <section className="container mx-auto px-4 py-16 md:py-24">
+              <div className="max-w-4xl mx-auto space-y-8">
+                <Button onClick={() => setCurrentView('home')} variant="outline" className="mb-4">
+                  ← Back to Home
+                </Button>
+                <h1 className="font-handwritten text-5xl md:text-7xl font-bold text-foreground leading-tight">
+                  Our Mission
+                </h1>
+                <Card className="bg-card/80 backdrop-blur-sm border-border">
+                  <CardContent className="p-6 md:p-8 space-y-4 text-foreground">
+                    <p className="text-base md:text-lg leading-relaxed">
+                      This project began as a critical observation: corporations hold immense power over our daily lives, yet meaningful accountability mechanisms for workers remain elusive. Traditional channels for raising workplace issues—HR, internal systems, and union routes—often feel like shouting into the void. Woolworst is an independent artistic initiative dedicated to closing this accountability gap. Our process involves collecting and consolidating verified experiences of systemic corporate misconduct into a data archive. We use this unique, anonymised data set as the material for public-facing art and research designed to expose patterns of harm. Our mandate is not to pursue individual legal claims, but to generate incontrovertible, systemic documentation that compels greater public disclosure and regulatory scrutiny of corporate behaviour.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </section>
+            <Footer setView={setCurrentView} />
+          </div>
+        );
+      
+      case 'guidelines':
+        return (
+          <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
+            <section className="container mx-auto px-4 py-16 md:py-24">
+              <div className="max-w-4xl mx-auto space-y-8">
+                <Button onClick={() => setCurrentView('home')} variant="outline" className="mb-4">
+                  ← Back to Home
+                </Button>
+                <h1 className="font-handwritten text-5xl md:text-7xl font-bold text-foreground leading-tight">
+                  Community Guidelines
+                </h1>
+                <Card className="bg-card/80 backdrop-blur-sm border-border">
+                  <CardContent className="p-6 md:p-8 space-y-4 text-foreground">
+                    <p className="text-base md:text-lg leading-relaxed">
+                      These guidelines are essential for maintaining the integrity and legal defensibility of our archive. We are collecting factual, verifiable data to inform an artistic and research project. We require that all submissions focus on systemic patterns of misconduct within the workplace (e.g., wage theft, health and safety failures, policy abuse). Do not submit personal opinions, emotionally charged language, or speculative claims; we only require factual testimony, dates, and locations. Anonymity is your firewall, but data integrity is ours. We reserve the right to moderate, edit, or reject any submission that contains hate speech, defamation, or unsubstantiated claims that would compromise the integrity of our artistic and research mandate. By submitting, you grant this independent artistic initiative a perpetual, non-exclusive right to use your anonymised, non-personal data for public display, artistic production, and systemic analysis.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </section>
+            <Footer setView={setCurrentView} />
+          </div>
+        );
+      
+      case 'faq':
+        return (
+          <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
+            <section className="container mx-auto px-4 py-16 md:py-24">
+              <div className="max-w-4xl mx-auto space-y-8">
+                <Button onClick={() => setCurrentView('home')} variant="outline" className="mb-4">
+                  ← Back to Home
+                </Button>
+                <h1 className="font-handwritten text-5xl md:text-7xl font-bold text-foreground leading-tight">
+                  FAQ
+                </h1>
+                <Card className="bg-card/80 backdrop-blur-sm border-border">
+                  <CardContent className="p-6 md:p-8 space-y-6 text-foreground">
+                    <div>
+                      <h3 className="font-handwritten text-2xl font-bold text-primary mb-2">
+                        Is Woolworst a law firm or offering legal advice?
+                      </h3>
+                      <p className="text-base md:text-lg leading-relaxed">
+                        No. We are an independent artistic accountability project. We do not provide legal counsel, representation, or assistance with individual claims. Submitting data to this project does not create an attorney-client relationship.
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className="font-handwritten text-2xl font-bold text-primary mb-2">
+                        Will I receive compensation or be involved in a class action lawsuit?
+                      </h3>
+                      <p className="text-base md:text-lg leading-relaxed">
+                        No. This project is not affiliated with any legal action, class action, or compensation scheme. The data you provide is used solely for the non-commercial purpose of artistic documentation and systemic research.
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className="font-handwritten text-2xl font-bold text-primary mb-2">
+                        What is done with the data?
+                      </h3>
+                      <p className="text-base md:text-lg leading-relaxed">
+                        Your anonymised testimony is cross-referenced with other data points to identify systemic patterns. These patterns are then used as the basis for public art installations, data visualisation, and research reports intended to increase public awareness and regulatory pressure.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </section>
+            <Footer setView={setCurrentView} />
+          </div>
+        );
+      
+      case 'privacy':
+        return (
+          <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
+            <section className="container mx-auto px-4 py-16 md:py-24">
+              <div className="max-w-4xl mx-auto space-y-8">
+                <Button onClick={() => setCurrentView('home')} variant="outline" className="mb-4">
+                  ← Back to Home
+                </Button>
+                <h1 className="font-handwritten text-5xl md:text-7xl font-bold text-foreground leading-tight">
+                  Privacy Policy
+                </h1>
+                <Card className="bg-card/80 backdrop-blur-sm border-border">
+                  <CardContent className="p-6 md:p-8 space-y-4 text-foreground">
+                    <p className="text-base md:text-lg leading-relaxed">
+                      We prioritise your anonymity. This project is focussed on collecting systemic patterns, not identifying individuals. We do not require, and strongly discourage you from submitting, any personally identifiable information (PII) such as full names, contact details, employee IDs, or specific addresses unless absolutely essential to verifying systemic patterns. All submitted data is immediately stripped of any identifying markers and stored securely as an anonymised research asset. We do not sell, rent, or distribute your raw data to any third parties. We only share aggregate, anonymised findings in public forums, artistic displays, and research publications.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </section>
+            <Footer setView={setCurrentView} />
+          </div>
+        );
+      
+      case 'disclaimer':
+        return (
+          <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
+            <section className="container mx-auto px-4 py-16 md:py-24">
+              <div className="max-w-4xl mx-auto space-y-8">
+                <Button onClick={() => setCurrentView('home')} variant="outline" className="mb-4">
+                  ← Back to Home
+                </Button>
+                <h1 className="font-handwritten text-5xl md:text-7xl font-bold text-foreground leading-tight">
+                  Disclaimer
+                </h1>
+                <Card className="bg-card/80 backdrop-blur-sm border-border">
+                  <CardContent className="p-6 md:p-8 space-y-4 text-foreground">
+                    <p className="text-base md:text-lg leading-relaxed">
+                      <strong>Important Legal Disclaimer:</strong> Woolworst is a non-commercial, independent artistic and documentation project. It does not constitute legal advice, nor does submitting content create any form of attorney-client, contractual, or employment relationship between you and the project. All information provided is for the sole purpose of identifying, illustrating, and archiving systemic corporate patterns in the form of artistic research. We are not affiliated with, endorsed by, or sponsored by the corporation being documented or any of its subsidiaries. Your use of this site and your submission of data is strictly at your own risk and does not guarantee any outcome, legal or otherwise.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </section>
+            <Footer setView={setCurrentView} />
+          </div>
+        );
+      
+      default:
+        return (
+          <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h1 className="font-handwritten text-5xl md:text-7xl font-bold text-foreground leading-tight">
-            Woolworst: The artistic accountability project
+            Woolworst: The Artistic Accountability Project
           </h1>
           
           <Card className="bg-card/50 backdrop-blur-sm border-border shadow-lg">
@@ -203,7 +348,11 @@ My 'Woolworst' poster is my testimony—the visual proof of their poison. I have
 
       <Footer setView={setCurrentView} />
     </div>
-  );
+        );
+    }
+  };
+
+  return renderContent();
 };
 
 export default Index;
