@@ -17,8 +17,8 @@ export default defineConfig(({ mode }) => ({
         },
     },
 
-    // <-- CHANGE THIS LINE ONLY -->
-    base: '/wooly-art-folio/',   // <-- Set to your repo name
+    // <-- UPDATED LINE -->
+    base: '/',
 
     build: {
         outDir: 'dist',
