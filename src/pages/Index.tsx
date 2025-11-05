@@ -278,33 +278,7 @@ My 'Woolworst' poster is my testimony—the visual proof of their poison. I have
                   
                   <div className="prose prose-invert prose-lg max-w-none space-y-4">
                     <p>
-                      This project began as a simple observation: corporations hold immense power over our 
-                      daily lives, yet meaningful accountability mechanisms remain elusive. Traditional channels 
-                      for consumer feedback often feel like shouting into the void.  
-                    </p>
-                    
-                    <p>
-                      The Woolworst initiative transforms frustration into creative documentation. Rather than 
-                      silent acceptance or angry tweets that disappear into the digital ether, this platform 
-                      provides a lasting archive of experiences, patterns, and collective observations.
-                    </p>
-                    
-                    <p>
-                      Each poster, each submission, represents a moment where someone decided their experience 
-                      mattered enough to document. Together, these individual moments create a mosaic of 
-                      corporate behavior that transcends any single complaint.
-                    </p>
-                    
-                    <p>
-                      This is not about cancel culture or vindictive attacks. It's about visibility, memory, 
-                      and the power of artistic expression to hold a mirror to corporate practices. When 
-                      companies know their actions become part of a permanent, public record—not buried in 
-                      customer service logs—behavior changes.
-                    </p>
-                    
-                    <p>
-                      We believe in the transformative power of creative accountability. Every submission helps 
-                      build a more transparent relationship between corporations and the communities they serve.
+                      This project began as a critical observation: corporations hold immense power over our daily lives, yet meaningful accountability mechanisms for workers remain elusive. Traditional channels for raising workplace issues—HR, internal systems, and union routes—often feel like shouting into the void. Woolworst is an independent artistic initiative dedicated to closing this accountability gap. Our process involves collecting and consolidating verified experiences of systemic corporate misconduct into a data archive. We use this unique, anonymised data set as the material for public-facing art and research designed to expose patterns of harm. Our mandate is not to pursue individual legal claims, but to generate incontrovertible, systemic documentation that compels greater public disclosure and regulatory scrutiny of corporate behaviour.
                     </p>
                   </div>
                 </CardContent>
